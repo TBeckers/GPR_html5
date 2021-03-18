@@ -1,0 +1,142 @@
+html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0px;
+      border: 0;
+      //overflow: hidden; /*  Disable scrollbars */
+      //display: block;  /* No floating content on sides */
+}
+#canvas{
+	border:1px solid black;
+}
+
+#div_canvas {
+  width:100%;
+  overflow: hidden;
+}
+
+#div_text {
+  width:90%;
+  height:50%;
+  margin-left: 5%;
+  margin-top: 0.5%;
+  background:rgba(255, 255, 255, 0);;
+  border-radius:0%;
+  position:absolute;
+  overflow:auto
+}
+
+@media screen and (orientation: landscape) {
+	:root {
+		--orientation: 1;
+	}
+	#slidecontainer2 {
+	  text-align: left;
+	  width: 46%;
+	  margin-left: 2.5%;
+	  float:left;
+	}
+	#slidecontainer3 {
+	  text-align: left;
+	  width: 46%;
+	  margin-right: 2.5%;
+	  float:right;
+	}
+}
+@media screen and (orientation: portrait) {
+	:root {
+		--orientation: 0;
+	}
+	#slidecontainer2 {
+	  text-align: left;
+	  width: 95%;
+	  margin-left: 2.5%;
+	  margin-right: 2.5%;
+	}
+	#slidecontainer3 {
+	  text-align: left;
+	  width: 95%;
+	  margin-left: 2.5%;
+	  margin-right: 2.5%;
+	}
+}
+input[type=button]{
+  background-color: #0065BD;
+  border: none;
+  color: white;
+  padding: 6px 10px;
+  text-decoration: none;
+  margin: 2px 2px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+input[type=button]:hover {
+  opacity: 1;
+}
+
+#slidecontainer1 {
+  text-align: left;
+  width: 95%;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
+
+
+#controlcontainer {
+  width: 95%;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 12px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #0065BD;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #0065BD;
+  cursor: pointer;
+}
+
+select{
+    margin: 2px 2px;
+	padding: 6px 0px;
+    background: #0065BD;
+    color:#ffffff;
+	opacity: 0.7;
+	border: none;
+}
+
+select:hover {
+  opacity: 1;
+}
+
+select option {
+    background: #0065BD;
+    color:#ffffff;
+}

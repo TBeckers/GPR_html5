@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#FFFFFF"/>
+	<meta name="Description" content="Gaussian Process Regression by Thomas Beckers">
+	<meta name="keywords" content="Gaussian Process Regression, GPR, app, android, pwa, apple, download, Thomas Beckers">
+	<title>Gaussian Process Regression</title>
+	<link rel="apple-touch-icon" href="icon192.png">
+	<link rel="icon" href="icon192.png">
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<script language="javascript" type="text/javascript" src="scripts/math_and_opt.js"></script>
+	<script language="javascript" type="text/javascript" src="scripts/gpr.js"></script>	
+</head>
+<body>
+	<div id="div_text">
+	<h1>Gaussian Process Regression</h1><br>
+	<br>GPR is a non-parametric regression technique which generalizes well for sparse datasets and allows to quantify the regression error due to its Bayesian nature.<br><br>
+	1. Click to add a data point<br>
+	2. You can drag the data points<br>
+	3. Drag a data point into the trash to delete it<br>
+	4. Use the sliders to tune the hyperparameters<br>
+	5. Click the button "Autotune" for automatic hyperparameter tuning<br>
+	6. Select different kernels in the dropdown menu<br><br>
+	Red line: Posterior mean (regression)<br>
+	Gray line: Posterior standard deviation (uncertainty)<br><br>
+	by Thomas Beckers, tbeckers@seas.upenn.edu, <a href="https://www.tbeckers.com" target="_blank" rel="noopener">www.tbeckers.com</a><br><br>
+	v1.7
+	
+	</div>
+<center>
+	<canvas id="canvas"></canvas>
+</center>
+<div id="controlcontainer">	
+	<input type="button" value="Clear" id="clearbutton" onclick="button_clear();">
+	<nobr><label for="kernelselection">Kernel:</label>
+	<select id="kernelselection" onchange="kernel_selection()">
+  <option value="kernel_sq">Squared Exponential</option>
+  <option value="kernel_mat">Matern</option>
+  <option value="kernel_per">Periodic</option>
+  <option value="kernel_lin">Linear</option>
+  <option value="kernel_quad">Quadratic</option>
+   </select></nobr>
+   <input type="button" value="Autotune" id="optbutton" onclick="opt_hyp();">
+  <nobr>Likelihood: <output id="lik_value">-</output></nobr>
+   </div> 
+	<div class="slidecontainer" id="slidecontainer1">
+  <label for="slider1">Data noise:</label><input type="range" min="1" max="1000" value="1" step="1" class="slider" id="slider1">
+  </div>
+  <div class="slidecontainer" id="slidecontainer2">
+  <label for="slider2">Hyperparameter 1:</label><input type="range" min="1" max="1000" value="500" step="1" class="slider" id="slider2">
+  </div>
+  <div class="slidecontainer" id="slidecontainer3">
+  <label for="slider3">Hyperparameter 2:</label><input type="range" min="1" max="1000" value="500" step="1" class="slider" id="slider3">
+  </div>
+	<div style="display:none;">
+  <img id="img_trash"
+       src="trash.png"
+       width="64" height="64">
+</div>
+	<script language="javascript" type="text/javascript" src="scripts/script.js"></script>
+</body>
+</html>
