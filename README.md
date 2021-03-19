@@ -5,8 +5,8 @@ The interactive website allows to explore Gaussian process regression for educat
 
 The website is written in HTML5 and JavaScript. 
 
-The website is publicity available at: https://apps.tbeckers.com/gpr
-and as Android app: https://play.google.com/store/apps/details?id=com.tbeckers.gpr.twa
+The website is publicly available at: https://apps.tbeckers.com/gpr and as Android app: https://play.google.com/store/apps/details?id=com.tbeckers.gpr.twa
 
 By Thomas Beckers
+
 tbeckers@seas.upenn.edu
